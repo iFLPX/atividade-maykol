@@ -23,6 +23,7 @@ function calcular() {
                 alert("Não é possível dividir por zero!");
                 return;
             }
+
             resultado = numero1 / numero2;
             break;
     }
