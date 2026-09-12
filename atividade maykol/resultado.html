@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+    <link rel="icon" href="favicon.ico">
+    <style>
+        body {
+            position: relative;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .top-right-image {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 80px;
+            height: auto;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <img src="calculadora.png" alt="Logo da calculadora" class="top-right-image">
+
+    <h1>Resultado</h1>
+
+    <h2 id="resultado"></h2>
+
+    <a href="index.html">Voltar ao início</a>
+
+    <br>
+
+    <a href="calculadora.html">Voltar para calculadora</a>
+
+    <script>
+        const resultado = localStorage.getItem("resultado");
+
+        if (resultado !== null) {
+            document.getElementById("resultado").textContent =
+                "O resultado é: " + resultado;
+        } else {
+            document.getElementById("resultado").textContent =
+                "Nenhum resultado encontrado.";
+        }
+    </script>
+
+</body>
+</html>
